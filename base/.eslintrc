@@ -1,0 +1,53 @@
+/**
+ * This file can be used to define Eslint configuration,
+ * more info in https://eslint.org/docs/v8.x/use/configure/
+ */
+
+/** @type {import('eslint').Linter.Config} */
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": [
+    "build",
+    "node_modules"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": true,
+    "sourceType": "module",
+    "tsconfigRootDir": "."
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:perfectionist/recommended-alphabetical",
+    "plugin:deprecation/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-nested-ternary": "warn",
+    "perfectionist/sort-interfaces": "warn",
+    "perfectionist/sort-imports": "warn",
+    "prettier/prettier": "warn"
+  }
+}

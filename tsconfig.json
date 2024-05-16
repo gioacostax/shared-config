@@ -1,3 +1,8 @@
+/**
+ * This file can be used to define Typescript configuration,
+ * more info in https://www.typescriptlang.org/tsconfig/
+ */
+
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
@@ -26,8 +31,8 @@
     "allowImportingTsExtensions": true,
     // "allowUmdGlobalAccess": true,
     // "customConditions": [],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext", // sonar 9.8 will fails, use 'node' instead
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // sonar 9.8 will fails, use 'node' instead
     // "moduleSuffixes": [],
     "noResolve": false,
     "resolveJsonModule": true,
@@ -64,7 +69,7 @@
     // "stripInternals": true,
 
     // ------------JS SUPPORT ------------ //
-    "allowJs": false,
+    "allowJs": true,
     "checkJs": false,
     // "maxNodeModuleJsDepth": 2,
 
@@ -73,7 +78,7 @@
     // "plugins": [],
 
     // ------------ INTEROP CONSTRAINTS ------------ //
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -97,18 +102,18 @@
     // ------------ COMPILER DIAGNOSTICS ------------ //
     "diagnostics": true,
     "explainFiles": false,
-    "extendedDiagnostics": true,
+    "extendedDiagnostics": false,
     "generateCpuProfile": "profile.cpuprofile",
-    "listEmittedFiles": true,
-    "listFiles": true,
-    "traceResolution": true,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
 
     // ------------ PROJECTS ------------ //
     "composite": true,
     "disableReferencedProjectLoad": false,
     "disableSolutionSearching": false,
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
+    "tsBuildInfoFile": null,
 
     // ------------ OUTPUT FORMATTING ------------ //
     "noErrorTruncation": false,
@@ -122,7 +127,7 @@
     "assumeChangesOnlyAffectDirectDependencies": true
   },
   // ------------ PATHS ------------ //
-  "include": ["src/**/*"]
+  "include": ["./shared/**/*", "./src/**/*", "./*"]
 
   // ------------ WATCHING ------------ //
   // "watchOptions": {},
