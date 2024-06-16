@@ -10,7 +10,7 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
@@ -32,7 +32,7 @@
     // "allowUmdGlobalAccess": true,
     // "customConditions": [],
     "module": "ESNext",
-    "moduleResolution": "Bundler", // sonar 9.8 will fails, use 'node' instead
+    "moduleResolution": "bundler", // sonar < 10.1 will fails, use 'node' instead
     // "moduleSuffixes": [],
     "noResolve": false,
     "resolveJsonModule": true,
@@ -82,7 +82,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "preserveSymlinks": true,
+    "preserveSymlinks": false,
     "verbatimModuleSyntax": true,
 
     // ------------ LANGUAGE AND ENVIRONMENT ------------ //
@@ -109,6 +109,7 @@
     "traceResolution": false,
 
     // ------------ PROJECTS ------------ //
+    "paths": { "@/*": ["./src/*"] },
     "composite": true,
     "disableReferencedProjectLoad": false,
     "disableSolutionSearching": false,
@@ -127,7 +128,10 @@
     "assumeChangesOnlyAffectDirectDependencies": true
   },
   // ------------ PATHS ------------ //
-  "include": ["./shared/**/*", "./src/**/*", "./*"]
+  "include": [
+    "./src/**/*",
+    "./*"
+  ],
 
   // ------------ WATCHING ------------ //
   // "watchOptions": {},
