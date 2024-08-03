@@ -42,12 +42,71 @@
     }
   },
   "rules": {
+    "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "React"
+      }
+    ],
+    "@typescript-eslint/restrict-template-expressions": "off",
     "no-console": "warn",
     "no-nested-ternary": "warn",
     "perfectionist/sort-interfaces": "warn",
-    "perfectionist/sort-imports": "warn",
+    "perfectionist/sort-imports": [
+      "warn",
+      {
+        "type": "alphabetical",
+        "internal-pattern": [
+          "@shared/**",
+          "@/**"
+        ],
+        "groups": [
+          "type",
+          "react",
+          "nanostores",
+          [
+            "builtin",
+            "external"
+          ],
+          "internal-type",
+          "internal",
+          [
+            "parent-type",
+            "sibling-type",
+            "index-type"
+          ],
+          [
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "side-effect",
+          "style",
+          "object",
+          "unknown"
+        ]
+      }
+    ],
+    "perfectionist/sort-intersection-types": "warn",
+    "perfectionist/sort-objects": "warn",
+    "perfectionist/sort-object-types": "warn",
+    "perfectionist/sort-jsx-props": "off",
+    "perfectionist/sort-named-imports": [
+      "warn",
+      {
+        "type": "alphabetical",
+        "group-kind": "types-first"
+      }
+    ],
+    "perfectionist/sort-union-types": [
+      "warn",
+      {
+        "type": "alphabetical",
+        "nullable-last": true
+      }
+    ],
     "prettier/prettier": "warn"
   }
 }
