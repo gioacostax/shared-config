@@ -6,7 +6,7 @@
 /// <reference types="vitest" />
 
 import { resolve } from 'path';
-import { defineConfig } from 'vitest/config';
+import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig(() => ({
   test: {
@@ -16,6 +16,7 @@ export default defineConfig(() => ({
     clearMocks: true,
     coverage: {
       all: true,
+      exclude: ['shared/vitest/test.utils.tsx', ...coverageConfigDefaults.exclude],
       include: ['src/**', 'shared/react/**'],
       provider: 'istanbul',
       reporter: ['html-spa', 'lcov', 'text'],
