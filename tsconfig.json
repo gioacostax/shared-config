@@ -91,7 +91,7 @@
     "jsx": "preserve",
     "jsxFactory": "React.createElement",
     "jsxFragmentFactory": "React.Fragment",
-    "jsxImportSource": "react",
+    "jsxImportSource": null,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "moduleDetection": "auto",
     "noLib": false,
@@ -109,12 +109,12 @@
     "traceResolution": false,
 
     // ------------ PROJECTS ------------ //
-    "paths": { "@/*": ["./src/*"] },
-    "composite": true,
+    // "paths": { "@/*": ["./src/*"] },
+    "composite": false,
     "disableReferencedProjectLoad": false,
     "disableSolutionSearching": false,
-    "incremental": true,
-    "tsBuildInfoFile": null,
+    "incremental": false,
+    // "tsBuildInfoFile": "tsconfig.tsbuildinfo",
 
     // ------------ OUTPUT FORMATTING ------------ //
     "noErrorTruncation": false,
@@ -126,12 +126,12 @@
 
     // ------------ CLI ------------ //
     "assumeChangesOnlyAffectDirectDependencies": true
-  },
+  }
   // ------------ PATHS ------------ //
-  "include": [
-    "./src/**/*",
-    "./*"
-  ],
+  // "include": [
+  //   "./src/**/*",
+  //   "./*"
+  // ],
 
   // ------------ WATCHING ------------ //
   // "watchOptions": {},
