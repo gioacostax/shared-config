@@ -12,7 +12,7 @@ import tseslint from 'typescript-eslint';
 /** @type {import("eslint").Linter.Config} */
 export default [
   /**
-   * Base config with Typescript
+   * Base config with Typescript dependencies
    * - eslint
    * - typescript-eslint
    * - @eslint/js
@@ -49,7 +49,7 @@ export default [
   ],
 
   /**
-   * Codes Styles config
+   * Codes Styles config dependencies
    * - eslint-plugin-prettier
    * - eslint-config-prettier
    * - eslint-plugin-perfectionist
