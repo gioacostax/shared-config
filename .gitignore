@@ -36,12 +36,13 @@ sonar-project.properties
 .scannerwork
 .sonarlint
 
-# Gatsby
-.cache/
-public
-src/gatsby-types.d.ts
-
 # Cache
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+bun.lockb
+
+# Tools
+.wrangler
+.astro
+.idea

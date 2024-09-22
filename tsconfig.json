@@ -126,8 +126,10 @@
 
     // ------------ CLI ------------ //
     "assumeChangesOnlyAffectDirectDependencies": true
-  }
+  },
   // ------------ PATHS ------------ //
+  "exclude": ["./node_modules/**/*", "./build/**/*"],
+
   // "include": [
   //   "./src/**/*",
   //   "./*"
