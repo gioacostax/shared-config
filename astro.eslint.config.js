@@ -12,5 +12,5 @@ export default [
    * - eslint-plugin-astro
    * - astro-eslint-parser
    */
-  ...astro.configs['jsx-a11y-recommended'],
+  ...astro.configs['flat/jsx-a11y-strict'],
 ];

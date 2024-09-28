@@ -5,7 +5,7 @@
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import criticalCSS from 'astro-critical-css';
+import criticalCSS from '@playform/inline';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({

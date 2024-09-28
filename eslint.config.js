@@ -22,7 +22,7 @@ export default [
     ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
     {
-      files: ['**/*.{js,ts,jsx,tsx}'],
+      files: ['**/*.{js,ts,jsx,tsx,astro}'],
       ignores: ['build/*', 'dist/*'],
       languageOptions: {
         globals: { ...globals.browser, ...globals.node },
