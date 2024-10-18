@@ -8,23 +8,31 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import eslintPluginImportX from 'eslint-plugin-import-x';
+import tsParser from '@typescript-eslint/parser';
 
 /** @type {import("eslint").Linter.Config} */
 export default [
   /**
    * Base config with Typescript dependencies
    * - eslint
+   * - globals
    * - typescript-eslint
    * - @eslint/js
    * - @types/eslint__js
+   * - eslint-plugin-import-x
+   * - @typescript-eslint/parser
    */
   ...[
+    eslintPluginImportX.flatConfigs.recommended,
+    eslintPluginImportX.flatConfigs.typescript,
     ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
     {
       files: ['**/*.{js,ts,jsx,tsx,astro}'],
       ignores: ['build/*', 'dist/*'],
       languageOptions: {
+        parser: tsParser,
         globals: { ...globals.browser, ...globals.node },
         parserOptions: {
           ecmaVersion: 'latest',
