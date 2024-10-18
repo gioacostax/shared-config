@@ -30,7 +30,7 @@ export default [
     eslintPluginImportX.flatConfigs.typescript,
     {
       files: ['**/*.{js,ts,jsx,tsx,astro}'],
-      ignores: ['build/*', 'dist/*', 'static/*'],
+      ignores: ['build/**', 'dist/**', 'static/**'],
       languageOptions: {
         globals: { ...globals.browser, ...globals.node },
         parser: tsParser,
