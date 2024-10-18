@@ -21,6 +21,7 @@ export default [
    * - @eslint/js
    * - @types/eslint__js
    * - eslint-plugin-import-x
+   * - eslint-import-resolver-typescript
    * - @typescript-eslint/parser
    */
   ...[
