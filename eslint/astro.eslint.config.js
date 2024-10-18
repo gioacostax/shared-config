@@ -15,7 +15,7 @@ export default [
    */
   ...configs['flat/jsx-a11y-strict'],
   {
-    files: ['**/*.'],
+    files: ['**/*.astro'],
     ...tsConfigs.disableTypeChecked,
   },
 ];
