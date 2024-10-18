@@ -12,7 +12,13 @@ export default defineConfig({
   build: {
     assets: 'assets',
   },
-  integrations: [tailwind(), criticalCSS(), sitemap()],
+  integrations: [
+    tailwind(),
+    criticalCSS({
+      Logger: 1, // Log only errors
+    }),
+    sitemap(),
+  ],
   outDir: './build',
   publicDir: './static',
 });
