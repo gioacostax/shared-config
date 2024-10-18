@@ -30,6 +30,7 @@ reports
 
 # Local env files
 *.local
+.dev.vars
 
 # Sonar
 sonar-project.properties
