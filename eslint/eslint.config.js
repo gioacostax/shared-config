@@ -4,12 +4,12 @@
  */
 
 import pluginJs from '@eslint/js';
+import tsParser from '@typescript-eslint/parser';
+import eslintPluginImportX from 'eslint-plugin-import-x';
 import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import eslintPluginImportX from 'eslint-plugin-import-x';
-import tsParser from '@typescript-eslint/parser';
+import { configs } from 'typescript-eslint';
 
 /** @type {import("eslint").Linter.Config} */
 export default [
@@ -24,21 +24,22 @@ export default [
    * - @typescript-eslint/parser
    */
   ...[
+    ...configs.strictTypeChecked,
+    ...configs.stylisticTypeChecked,
     eslintPluginImportX.flatConfigs.recommended,
     eslintPluginImportX.flatConfigs.typescript,
-    ...tseslint.configs.strictTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
     {
       files: ['**/*.{js,ts,jsx,tsx,astro}'],
       ignores: ['build/*', 'dist/*'],
       languageOptions: {
-        parser: tsParser,
         globals: { ...globals.browser, ...globals.node },
+        parser: tsParser,
         parserOptions: {
           ecmaVersion: 'latest',
-          project: true,
+          projectService: true,
           sourceType: 'module',
-          tsconfigRootDir: './tsconfig.json',
+          tsconfigRootDir: '../../../.',
+          warnOnUnsupportedTypeScriptVersion: false,
         },
       },
       ...pluginJs.configs.recommended,
@@ -50,6 +51,7 @@ export default [
         '@typescript-eslint/no-unused-vars': 'warn',
         '@typescript-eslint/restrict-template-expressions': 'off',
         '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
+        'import-x/no-named-as-default-member': 'off',
         'no-console': 'warn',
         'no-nested-ternary': 'warn',
       },

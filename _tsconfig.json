@@ -100,7 +100,7 @@
     "useDefineForClassFields": true,
 
     // ------------ COMPILER DIAGNOSTICS ------------ //
-    "diagnostics": true,
+    "diagnostics": false,
     "explainFiles": false,
     "extendedDiagnostics": false,
     "generateCpuProfile": "profile.cpuprofile",
