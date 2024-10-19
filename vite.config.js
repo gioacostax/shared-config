@@ -12,8 +12,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[hash].[ext]',
-        chunkFileNames: 'js/[hash].js',
-        entryFileNames: 'index-[hash].js',
+        chunkFileNames: 'assets/[hash].js',
+        entryFileNames: 'assets/index-[hash].js',
         manualChunks: (id) => id.includes('node_modules') && 'vendor',
       },
     },
