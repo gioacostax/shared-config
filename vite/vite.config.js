@@ -5,6 +5,10 @@
 
 import { defineConfig } from 'vite';
 
+/**
+ * Vite React config dependencies
+ * - vite
+ */
 export default defineConfig({
   build: {
     assetsDir: '.',
