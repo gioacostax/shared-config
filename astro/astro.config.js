@@ -8,6 +8,12 @@ import tailwind from '@astrojs/tailwind';
 import criticalCSS from '@playform/inline';
 import { defineConfig } from 'astro/config';
 
+/**
+ * Astro config dependencies
+ * - @astrojs/sitemap
+ * - @astrojs/tailwind
+ * - @playform/inline
+ */
 export default defineConfig({
   build: {
     assets: 'assets',
