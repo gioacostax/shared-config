@@ -25,6 +25,11 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  markdown: {
+    shikiConfig: {
+      theme: 'nord',
+    },
+  },
   outDir: './build',
   publicDir: './static',
 });

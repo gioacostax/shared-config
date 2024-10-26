@@ -4,7 +4,7 @@
  */
 
 import { configs } from 'eslint-plugin-astro';
-import { configs as tsConfigs } from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 
 /** @type {import("eslint").Linter.Config} */
 export default [
@@ -16,6 +16,7 @@ export default [
   ...configs['flat/jsx-a11y-strict'],
   {
     files: ['**/*.astro'],
-    ...tsConfigs.disableTypeChecked,
+    processor: 'astro/client-side-ts',
+    ...tseslint.configs.disableTypeChecked,
   },
 ];

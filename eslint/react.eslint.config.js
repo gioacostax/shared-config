@@ -3,9 +3,6 @@
  * more info in https://eslint.org/docs/latest/use/configure/configuration-files/
  */
 
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { fixupPluginRules } from '@eslint/compat';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
