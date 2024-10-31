@@ -15,14 +15,10 @@ import { defineConfig } from 'vite';
 export default (host, path = './cert', scriptName = 'dev:https') =>
   defineConfig({
     ...(process.env.npm_lifecycle_event === scriptName && {
-      vite: {
-        server: {
-          host,
-          https: {
-            cert: readFileSync(resolve(path, `${host}.pem`)),
-            key: readFileSync(resolve(path, `${host}-key.pem`)),
-          },
-        },
+      host,
+      https: {
+        cert: readFileSync(resolve(path, `${host}.pem`)),
+        key: readFileSync(resolve(path, `${host}-key.pem`)),
       },
     }),
   });

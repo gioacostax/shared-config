@@ -27,9 +27,25 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      theme: 'nord',
+      defaultColor: 'light',
+      themes: {
+        dark: 'catppuccin-mocha',
+        light: 'github-light',
+      },
     },
   },
   outDir: './build',
   publicDir: './static',
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/asset.[hash][extname]',
+          chunkFileNames: 'assets/chunk.[hash].mjs',
+          entryFileNames: 'assets/entry.[hash].mjs',
+        },
+      },
+    },
+    plugins: [],
+  },
 });

@@ -3,19 +3,18 @@
  * more info in https://astro.build/config
  */
 
-import react from '@astrojs/react';
+import preact from '@astrojs/preact';
 import { defineConfig } from 'astro/config';
 import svgr from 'vite-plugin-svgr';
 
 /**
  * Astro React config dependencies
- * - @astrojs/react
+ * - @astrojs/preact
  * - vite-plugin-svgr
- * - react
- * - react-dom
+ * - preact
  */
 export default defineConfig({
-  integrations: [react()],
+  integrations: [preact({ compat: true })],
   vite: {
     plugins: [svgr()],
   },
