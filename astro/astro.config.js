@@ -5,27 +5,19 @@
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import criticalCSS from '@playform/inline';
 import { defineConfig } from 'astro/config';
 
 /**
  * Astro config dependencies
  * - @astrojs/sitemap
  * - @astrojs/tailwind
- * - @playform/inline
  */
 export default defineConfig({
   build: {
     assets: 'assets',
-    format: 'preserve',
+    format: 'file',
   },
-  integrations: [
-    tailwind(),
-    criticalCSS({
-      Logger: 1, // Log only errors
-    }),
-    sitemap(),
-  ],
+  integrations: [tailwind(), sitemap()],
   markdown: {
     shikiConfig: {
       defaultColor: 'light',
@@ -37,6 +29,7 @@ export default defineConfig({
   },
   outDir: './build',
   publicDir: './static',
+  trailingSlash: 'never',
   vite: {
     build: {
       rollupOptions: {
