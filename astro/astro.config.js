@@ -20,9 +20,9 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
-    criticalCSS({
-      Logger: 1, // Log only errors
-    }),
+    // criticalCSS({
+    //   Logger: 1, // Log only errors
+    // }),
     sitemap(),
   ],
   markdown: {
