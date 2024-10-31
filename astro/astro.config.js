@@ -17,12 +17,13 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   build: {
     assets: 'assets',
+    format: 'preserve',
   },
   integrations: [
     tailwind(),
-    // criticalCSS({
-    //   Logger: 1, // Log only errors
-    // }),
+    criticalCSS({
+      Logger: 1, // Log only errors
+    }),
     sitemap(),
   ],
   markdown: {
