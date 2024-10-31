@@ -16,6 +16,7 @@ export default defineConfig({
   build: {
     assets: 'assets',
     format: 'file',
+    inlineStylesheets: 'always',
   },
   integrations: [tailwind(), sitemap()],
   markdown: {
