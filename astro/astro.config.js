@@ -14,7 +14,7 @@ import { defineConfig } from 'astro/config';
  */
 export default defineConfig({
   build: {
-    assets: 'assets',
+    assets: '_assets',
     format: 'file',
     inlineStylesheets: 'always',
   },
@@ -35,9 +35,9 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/asset.[hash][extname]',
-          chunkFileNames: 'assets/chunk.[hash].mjs',
-          entryFileNames: 'assets/entry.[hash].mjs',
+          assetFileNames: '_assets/[hash][extname]',
+          chunkFileNames: '_assets/[hash].mjs',
+          entryFileNames: '_assets/[hash].js',
         },
       },
     },
