@@ -11,13 +11,13 @@ import { defineConfig } from 'vite';
  */
 export default defineConfig({
   build: {
-    assetsDir: '.',
+    assetsDir: '_assets',
     outDir: 'build',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[hash].[ext]',
-        chunkFileNames: 'assets/[hash].js',
-        entryFileNames: 'assets/index-[hash].js',
+        assetFileNames: '_assets/[hash].[ext]',
+        chunkFileNames: '_assets/[hash].mjs',
+        entryFileNames: '_assets/[hash].js',
         manualChunks: (id) => id.includes('node_modules') && 'vendor',
       },
     },
