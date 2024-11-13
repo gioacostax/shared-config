@@ -3,9 +3,9 @@
  * more info in https://vitejs.dev/config/
  */
 
-import { defineConfig } from 'astro/config';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 /**
  * Vite config dependencies
