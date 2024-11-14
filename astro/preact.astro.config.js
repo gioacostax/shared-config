@@ -4,6 +4,7 @@
  */
 
 import preact from '@astrojs/preact';
+import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
 import svgr from 'vite-plugin-svgr';
 
@@ -14,7 +15,7 @@ import svgr from 'vite-plugin-svgr';
  * - preact
  */
 export default defineConfig({
-  integrations: [preact({ compat: true })],
+  integrations: [import.meta.env.MODE === 'production' ? preact({ compat: true }) : react()],
   vite: {
     plugins: [svgr()],
   },
