@@ -70,17 +70,19 @@ export default [
         {
           customGroups: {
             type: {
-              react: ['react', 'react-*'],
+              react: ['^react$', '^react-.+'],
+              shared: ['^@shared/'],
             },
             value: {
-              react: ['react', 'react-*'],
+              react: ['^react$', '^react-.+'],
+              shared: ['^@shared/'],
             },
           },
-          environment: 'bun',
           groups: [
             'type',
             'react',
             ['builtin', 'external'],
+            'shared',
             'internal-type',
             'internal',
             ['parent-type', 'sibling-type', 'index-type'],
@@ -88,7 +90,7 @@ export default [
             'object',
             'unknown',
           ],
-          internalPattern: ['@shared/**', '@/**'],
+          internalPattern: ['^@/'],
           type: 'alphabetical',
         },
       ],
