@@ -3,7 +3,7 @@
  * more info in https://vitejs.dev/config/
  */
 
-import react from '@vitejs/plugin-react-swc';
+import { reactRouter } from '@react-router/dev/vite';
 import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
@@ -13,5 +13,5 @@ import svgr from 'vite-plugin-svgr';
  * - vite-plugin-svgr
  */
 export default defineConfig({
-  plugins: [react(), svgr()],
+  plugins: [reactRouter(), svgr()],
 });
