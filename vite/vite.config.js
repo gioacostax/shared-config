@@ -3,11 +3,13 @@
  * more info in https://vitejs.dev/config/
  */
 
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 /**
  * Vite React config dependencies
  * - vite
+ * - @tailwindcss/vite
  */
 export default defineConfig({
   build: {
@@ -22,4 +24,5 @@ export default defineConfig({
       },
     },
   },
+  plugins: [tailwindcss()],
 });
