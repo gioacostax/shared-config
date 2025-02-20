@@ -15,6 +15,7 @@ dist
 build
 dist-ssr
 tsconfig.tsbuildinfo
+.angular
 
 # System files
 .DS_Store
