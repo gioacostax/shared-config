@@ -4,7 +4,7 @@
  */
 
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import tailwind from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
 /**
@@ -18,7 +18,7 @@ export default defineConfig({
     format: 'file',
     inlineStylesheets: 'always',
   },
-  integrations: [tailwind(), sitemap()],
+  integrations: [sitemap()],
   markdown: {
     shikiConfig: {
       defaultColor: 'light',
@@ -41,6 +41,6 @@ export default defineConfig({
         },
       },
     },
-    plugins: [],
+    plugins: [tailwind()],
   },
 });
