@@ -15,7 +15,6 @@ export default [
    * - eslint-plugin-react
    * - eslint-plugin-react-hooks
    * - eslint-plugin-jsx-a11y
-   * - @types/eslint__js
    * - @eslint/compat (for legacy support)
    */
   {
