@@ -35,7 +35,7 @@ export default [
           ecmaVersion: 'latest',
           projectService: true,
           sourceType: 'module',
-          tsconfigRootDir: '../../../.',
+          tsconfigRootDir: process.cwd(),
           warnOnUnsupportedTypeScriptVersion: false,
         },
       },
