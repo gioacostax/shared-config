@@ -1,0 +1,63 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+  "html": {
+    "parser": {
+      "interpolation": true
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noNonNullAssertion": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "double",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always"
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "identifierOrder": "natural",
+            "groups": [
+              { "type": true, "source": ["@angular/**", "rxjs", "rxjs/**"] },
+              { "type": false, "source": ["@angular/**", "rxjs", "rxjs/**"] },
+              ":BLANK_LINE:",
+              { "type": true, "source": [":PACKAGE:"] },
+              { "type": false, "source": [":PACKAGE:"] },
+              ":BLANK_LINE:",
+              { "type": true, "source": [":ALIAS:"] },
+              { "type": false, "source": [":ALIAS:"] },
+              ":BLANK_LINE:",
+              { "type": true, "source": [":PATH:"] },
+              { "type": false, "source": [":PATH:"] }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
