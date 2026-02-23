@@ -9,7 +9,6 @@
  */
 /** @type {import("prettier").Options} */
 export default {
-  plugins: [],
   overrides: [
     {
       files: '*.html',
@@ -18,4 +17,5 @@ export default {
       },
     },
   ],
+  plugins: [],
 };

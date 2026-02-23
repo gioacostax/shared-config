@@ -1,6 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
   "html": {
+    "formatter": {
+      "indentScriptAndStyle": false,
+      "selfCloseVoidElements": "always"
+    },
     "parser": {
       "interpolation": true
     }
@@ -19,44 +23,58 @@
       }
     }
   },
+  "json": {
+    "assist": {
+      "enabled": false
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "*.css",
+        "*.scss"
+      ],
+      "javascript": {
+        "formatter": {
+          "quoteStyle": "double"
+        }
+      }
+    }
+  ],
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 100
+    "lineWidth": 100,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
       "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
       "trailingCommas": "all",
       "semicolons": "always",
-      "arrowParentheses": "always"
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
     }
   },
   "assist": {
+    "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": {
-          "level": "on",
-          "options": {
-            "identifierOrder": "natural",
-            "groups": [
-              { "type": true, "source": ["@angular/**", "rxjs", "rxjs/**"] },
-              { "type": false, "source": ["@angular/**", "rxjs", "rxjs/**"] },
-              ":BLANK_LINE:",
-              { "type": true, "source": [":PACKAGE:"] },
-              { "type": false, "source": [":PACKAGE:"] },
-              ":BLANK_LINE:",
-              { "type": true, "source": [":ALIAS:"] },
-              { "type": false, "source": [":ALIAS:"] },
-              ":BLANK_LINE:",
-              { "type": true, "source": [":PATH:"] },
-              { "type": false, "source": [":PATH:"] }
-            ]
-          }
-        }
+        "useSortedAttributes": "on",
+        "useSortedInterfaceMembers": "on",
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
       }
     }
   }
