@@ -18,4 +18,12 @@ export default {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
+  overrides: [
+    {
+      files: ['*.css', '*.scss'],
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 };

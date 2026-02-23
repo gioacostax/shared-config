@@ -31,6 +31,8 @@ Thumbs.db
 /reports
 
 # Local env files
+src/env/development.ts
+src/env/production.ts
 /*.local
 /.dev.vars
 

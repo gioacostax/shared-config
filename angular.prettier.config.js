@@ -9,6 +9,13 @@
  */
 /** @type {import("prettier").Options} */
 export default {
-  plugins: ['prettier-plugin-tailwindcss'],
-  overrides: [],
+  plugins: [],
+  overrides: [
+    {
+      files: '*.html',
+      options: {
+        parser: 'angular',
+      },
+    },
+  ],
 };
